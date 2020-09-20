@@ -7,7 +7,7 @@ class TestCanBeConfigured(unittest.TestCase):
         self.actionwords = Actionwords(self)
 
     def test_display_settings(self):
-        # Tags: priority:1
+        # Tags: priority:medium
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # When I switch to settings mode
@@ -16,7 +16,7 @@ class TestCanBeConfigured(unittest.TestCase):
         self.actionwords.displayed_message_is(free_text = "Settings:\n - 1: water hardness\n - 2: grinder")
 
     def test_default_settings(self):
-        # Tags: priority:0
+        # Tags: priority:high
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # When I switch to settings mode
